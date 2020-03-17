@@ -10,6 +10,7 @@ const volvo = {
 console.log(ferrari.prototype)
 console.log(ferrari.__proto__) //atributo, consegue acessar o prototipo do objeto, o obj pai, retorna.
 console.log(ferrari.__proto__ === Object.prototype)
+console.log(ferrari.__proto__ == Object)
 console.log(volvo.__proto__ === Object.prototype)
 console.log(Object.prototype.__proto__ === null)
 
