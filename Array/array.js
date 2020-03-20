@@ -29,3 +29,4 @@ aprovados = ['Bia', 'Carlos', 'Ana']
 aprovados.splice(1, 1) //serve para adc e remover elementos no índices e tb remover elementos no array
 console.log(aprovados)
 
+
