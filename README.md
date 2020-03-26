@@ -6,14 +6,16 @@
 
  > Aprendendo linguaguem de programação Javascript com suas novas atualizações do ECMAScript.
  
- > Usando ferramentas
+ > Usando ferramentas:
  
-   -
-   -
-   -
-
-   -
-   
-   - CSS 
-   - HTML
-   - Desenvolvendo Websites
+  - Javascript
+  - React
+  - VueJS 
+  - Node
+  - HTML
+  - CSS
+  - jQuery
+  - Bootstrap
+  - Webpack
+  - Gulp 
+  - Banco de Dados
