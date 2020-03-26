@@ -8,6 +8,12 @@
  
  > Usando ferramentas
  
+   -
+   -
+   -
+
+   -
+   
    - CSS 
    - HTML
    - Desenvolvendo Websites
