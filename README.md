@@ -6,6 +6,8 @@
 
  > Aprendendo linguaguem de programação Javascript com suas novas atualizações do ECMAScript.
  
- > Usando ferramentas CSS e HTML
+ > Usando ferramentas
  
- > Desenvolvendo Websites
+   - CSS 
+   - HTML
+   - Desenvolvendo Websites
