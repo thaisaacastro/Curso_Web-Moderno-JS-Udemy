@@ -1,5 +1,5 @@
-const moduloA = require('./MóduloA')
-const moduloB = require('./MóduloB')
+const moduloA = require('./ModuloA')
+const moduloB = require('./ModuloB')
 
 console.log(moduloA.ola)
 console.log(moduloA.bemVindo)
