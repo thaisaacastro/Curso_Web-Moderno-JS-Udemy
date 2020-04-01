@@ -10,3 +10,13 @@ function salvarProduto(produto) {
   produtos[produto.id] = produto
   return produto
 }
+
+function getProduto(id) {
+  return produtos[id] || {}
+}
+
+function getProdutos() {
+  return Object.value(produtos)
+}
+
+module.exports = { salvarProduto, getProduto, getProdutos }
