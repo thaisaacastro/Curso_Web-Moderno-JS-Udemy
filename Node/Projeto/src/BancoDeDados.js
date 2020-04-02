@@ -19,4 +19,10 @@ function getProdutos() {
   return Object.value(produtos)
 }
 
+function excluirProduto(id) {
+  const produto = produto[id]
+  delete produtos[id]
+  return produto
+}
+
 module.exports = { salvarProduto, getProduto, getProdutos }
