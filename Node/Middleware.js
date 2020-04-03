@@ -20,5 +20,5 @@ const exec = (ctx, ...middlewares) => {
   execPasso(0)
 }
 const ctx = {}
-exec(ctx, passo1, passo2, passo3)
+exec(ctx, passo1, passo2, passo3) // a gente pode chamar qualquer passo que contenha next
 console.log(ctx)
