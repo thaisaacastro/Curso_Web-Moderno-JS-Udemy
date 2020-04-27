@@ -3,5 +3,23 @@
 <form action="http://localhost:3003/usuarios" method="POST">
   <input type="text" name="nome">
   <input type="password" name="senha">
+  <textarea name="bio" cols="30" rows="10"></textarea>
+  <div>
+    <input type="radio" name="tipo" value="admin"> Admin
+    <input type="radio" name="tipo" value="regular"> Regular
+    <input type="radio" name="tipo" value="professor"> Professor
+  </div>
   <button>Incluir</button>
 </form>
+
+<style>
+  input,
+  textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type=radio] {
+    display: inline;
+  }
+</style>
