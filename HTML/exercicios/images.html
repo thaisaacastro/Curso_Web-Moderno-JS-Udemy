@@ -65,6 +65,11 @@
     if (novoInicio >= fim) {
       elem.style.left = novoInicio + 'px'
       setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+    } else {
+      callback()
     }
   }
+
+  const p = document.querySelector('[wm-slider] > p')
+  p.style.display = 'block'
 </script>
