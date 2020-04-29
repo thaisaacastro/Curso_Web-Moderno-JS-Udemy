@@ -60,7 +60,11 @@
 </style>
 
 <script>
-  function mover(eleme, inicio, fim, passo, callback) {
+  function mover(elem, inicio, fim, passo, callback) {
     const novoInicio = inicio - passo
+    if (novoInicio >= fim) {
+      elem.style.left = novoInicio + 'px'
+      setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+    }
   }
 </script>
