@@ -88,8 +88,10 @@
     const inicio = innerWidth
     const fim = -slide.clientWidth
 
+    slide.style.left = `${inicio}px`
 
+    mover(slide, inicio, fim, 5, () => {
 
-
+    })
   }
 </script>
