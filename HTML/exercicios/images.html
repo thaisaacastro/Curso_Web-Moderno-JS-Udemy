@@ -91,7 +91,15 @@
     slide.style.left = `${inicio}px`
 
     mover(slide, inicio, fim, 5, () => {
-
+      slide.style.display = 'none'
+      exibirSlides(slides, getProximo(slides, slide))
     })
   }
+
+  function getProximo(lista, atual) {
+    const i = lista.indexOf(atual) + 1
+    return i < lista.length ? lista[i] : lista[0]
+  }
+
+  slider()
 </script>
