@@ -33,6 +33,9 @@
 <script>
   function configurarVideo(id) {
     const video = document.getElementById(id)
+    video.oncontextmenu = () => false
+
+    document.querySelector(`[wm-play=${id}]`).onclick = e => video.play()
   }
 
   configurarVideo('meuVideo')
