@@ -11,4 +11,9 @@ li {
   margin-top: 60px;
 }
 
+.tag {
+  border: solid 4px;
+  margin: 5px;
+}
+
 
