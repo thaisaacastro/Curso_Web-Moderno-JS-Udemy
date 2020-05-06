@@ -1,3 +1,13 @@
+const colors = {
+  p: '#388e3c',
+  div: '#1565c0',
+  span: '#e53935',
+  section: '#f67809',
+  ul: '#5e35b1',
+  ol: '#fbc02d',
+  header: '#d81b60',
+}
+
 document.querySelectorAll('.tag').forEach(elemento => {
   const tagName = elemento.tagName.toLowerCase() // colocar todas letras em minusc
 
