@@ -1,13 +1,13 @@
 document.querySelectorAll('.tag').forEach(elemento => {
-  const tagName = box.tagName.toLowerCase() // colocar todas letras em minusc
+  const tagName = elemento.tagName.toLowerCase() // colocar todas letras em minusc
 
   elemento.style.borderColor = '#616161'
 
-  if (!box.classList.contains('nolabel')) {
+  if (!elemento.classList.contains('nolabel')) {
     const label = document.createElement('label')
     label.style.backgroundColor = '#616161'
     label.innerHTML = tagName
-    elemento.insertBefore(label, elemento.childNodes)
+    elemento.insertBefore(label, elemento.childNodes[0])
 
   }
 })
