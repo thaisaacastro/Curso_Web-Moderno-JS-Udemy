@@ -10,6 +10,11 @@ const colors = {
   main: '#00acc1',
   footer: '#304ffe',
   form: '#9f6581',
+  body: '#25b6da',
+  padrao: '#616161',
+  get(tag) {
+
+  }
 
 }
 
