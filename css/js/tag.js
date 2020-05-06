@@ -9,6 +9,8 @@ const colors = {
   nav: '#64dd17',
   main: '#00acc1',
   footer: '#304ffe',
+  form: '#9f6581',
+
 }
 
 document.querySelectorAll('.tag').forEach(elemento => {
