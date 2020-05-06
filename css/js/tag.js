@@ -5,6 +5,8 @@ document.querySelectorAll('.tag').forEach(elemento => {
 
   if (!box.classList.contains('nolabel')) {
     const label = document.createElement('label')
-    label.style.backgroundColor
+    label.style.backgroundColor = '#616161'
+    label.innerHTML = tagName
+
   }
 })
