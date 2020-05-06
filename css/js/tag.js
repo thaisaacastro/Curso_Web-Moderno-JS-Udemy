@@ -6,6 +6,9 @@ const colors = {
   ul: '#5e35b1',
   ol: '#fbc02d',
   header: '#d81b60',
+  nav: '#64dd17',
+  main: '#00acc1',
+  footer: '#304ffe',
 }
 
 document.querySelectorAll('.tag').forEach(elemento => {
