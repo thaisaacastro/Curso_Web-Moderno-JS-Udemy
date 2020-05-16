@@ -14,7 +14,15 @@
       /* p + ul -> seletor de irmãos, diretamente depois */
       /* p ˜ ol -> irmãos de forma geral*/
       /* [feira] -> procurar todos os elementos relacionadas [] */
-    p ˜ ol {
+    /* [feira] -> procurar todos os elementos relacionadas [] */
+      /*[feira˜=escritorio] -> elemento acessa o atributo */
+      /* [feira*=sa] -> ou seja, dentro do elemento que está contido neste atributo podemos acessar contendo isto */
+      /* span:nth-child(1)-> tag span primeiro elemento do filho de alguém*/
+      /* section > :nth-child(odd) -> section pegando para atributos para os filhos ímpares/even -> filhos pares */
+      /* section > :nth-child(odd), ul -> e ainda os ul, além de adc vírgulas para adc mais atrib*/
+      /* section > :nth-child(odd) label -> apenas o label do spam*/
+      /* section > span:nth-of-type(2) -> elemento do tipo spam, qualquer elemento*/
+    section > span:nth-of-type(2) {
      color: #ff0;
      background-color: #f77;
     }
