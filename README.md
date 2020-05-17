@@ -1,7 +1,6 @@
-# Curso_Web-Moderno-JS-Udemy
+# Curso de Web Moderno da Udemy de Javascript
 
-> Curso de Web Moderno da Udemy de Javascript
- > Usando ferramentas:
+> tecnologias utilizados no treinamento
 
 - Javascript
   - React
