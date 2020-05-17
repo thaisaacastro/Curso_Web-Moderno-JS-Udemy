@@ -1,6 +1,6 @@
 # Curso de Web Moderno da Udemy de Javascript
 
-> tecnologias utilizados no treinamento
+> Tecnologias utilizados no treinamento
 
 - Javascript
   - React
