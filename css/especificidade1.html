@@ -7,10 +7,20 @@
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
         /* Em linhas gerais ...
-        
+
          1- Regra com !important
+         2- Seletores mais específicos
+         3- Última  regra processada 
          
           */
+
+          p {
+              background-color: #aaa;
+          }
+
+          .observacao {
+              background-color: #55ff55;
+          }
     </style>
 </head>
 
