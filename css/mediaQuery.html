@@ -16,8 +16,11 @@
             .muito-pequeno{display:block} /*aparecerá quando a tela estiver em modo pequeno*/
         }
 
-        @media(max-width: 1000px),(orientation: landscape) /* -> retratro /landscape -> paisagem */ {
-            .pequeno-retrato{display: block;}
+        @media(max-width: 1000px),(orientation: portrait) /* -> retratro /landscape -> paisagem */ {
+            .pequeno-retrato{display: block;} /*mostrará em forma que a tela esteja em modo retrato*/
+        }
+        @media(min-width: 500px) and (max-width: 1000px) {
+            .intervalo{display: block;} /*min e max do viewport*/
         }
     </style>
 </head>
