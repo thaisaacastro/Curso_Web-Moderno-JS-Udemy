@@ -146,7 +146,11 @@
     </header>
 
     <script>
-        
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#') [1]
+            const newURL = e.newURL.split('#') [1]
+            console.log(oldURL, newURL)
+        }
     </script>
 </body>
 
