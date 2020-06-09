@@ -19,6 +19,15 @@
         .flex-container {
             display: flex;
             flex-direction: column; /*coluna*/
+            flex-direction: column-reverse; /*reverter à lógica do HTML, 10, 9, 8...*/
+            flex-direction: row-reverse; /*float á direita/ escrita do lado*/
+            flex-direction: row; /*padrão, coluna de lado*/
+            width: 50%;
+            flex-wrap: wrap; /* quebra de linhas, respeitando as dimensões*/
+            flex-wrap: wrap-reverse; /*a linha debaixo vai pra cima e a outra para baixo*/
+            flex-flow: row wrap; /*volta ao padrão*/
+            height: 200px;
+
         }
     </style>
 </head>
