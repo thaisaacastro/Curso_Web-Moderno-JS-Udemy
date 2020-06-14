@@ -14,7 +14,12 @@
             box-sizing: border-box;
             height: 300px;
             width: 600px;    
-            
+        }
+        .flex-container div:nth-child(3) /*pegar o terceiro filho da classe*/ {
+            background-color: indianred;
+            order: 1; /*elementos que possui uma ordem maior serão colocadas por último*/
+            order: 0; /* começa normalmente */
+            order: -1;
         }
 
         
