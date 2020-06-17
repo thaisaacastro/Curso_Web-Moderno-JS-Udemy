@@ -27,7 +27,15 @@
         body {
             display: grid;
             min-height: 100vh; /*ocupar a altura inteira*/
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-areas: 
+                'cabecalho cabecalho'
+                'navegacao conteudo'
+                'rodape rodape'
+            ; /*organizar os elementos neste espaço*/
         }
+        @media
 
     </style>
 </head>
