@@ -20,6 +20,14 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: 
+            [inicio] 1fr
+            [metade-2 meio-2] 1fr[fim]; /*quatro linhas aplicadas na formação de sua grid*/            ;
+            grid-template-rows: repeat(3, 1fr);
+        }
     </style>
 </head>
 
