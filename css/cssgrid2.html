@@ -25,8 +25,13 @@
             display: grid;
             grid-template-columns: 
             [inicio] 1fr
-            [metade-2 meio-2] 1fr[fim]; /*quatro linhas aplicadas na formação de sua grid*/            ;
+            [metade-2 meio-2] 1fr[fim]; /*quatro linhas aplicadas na formação de sua grid*/            
             grid-template-rows: repeat(3, 1fr);
+        }
+
+        .d1{
+            grid-column-start: metade-2;
+            grid-column-end: fim; /*elemento 1 vai começar numa linha e os outros em outra*/
         }
     </style>
 </head>
