@@ -13,9 +13,10 @@
         document.getElementById('primeiro').classList.add('destaque')
 
         const divs = document.getElementsByTagName('div')
-        Array.from(divs).forEach?(e => e.classList.remove('destaque'))
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
 
-        const divs Array = [...divs]
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
         
     </script>
 </body>
