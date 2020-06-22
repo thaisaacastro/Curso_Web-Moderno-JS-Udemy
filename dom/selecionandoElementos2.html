@@ -18,6 +18,12 @@
         //função deselecionar
         const deselecionar = seletor =>
             document.querySelectorAll(seletor).forEach(e.classList.remove('destaque'))
+
+            selecionar('div')
+
+            deselecionar('*') //seletor universal
+            selecionar('.terceiro.ultimo')
+            deselecionar('*')
     </script>
 </body>
 </html>
