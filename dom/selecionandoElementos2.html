@@ -8,22 +8,31 @@
 <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
-    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <div class="ultimo terceiro"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        document.querySelector('#primeiro').classList.add('destaque')
+      document.querySelector('#primeiro').classList.add('destaque')
 
-    const selecionar = seletor => // mais de um seletor
-        document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque')) // duas funções
+        const selecionar = seletor => 
+        document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque')) // mais de um seletor / duas funções
 
-        //função deselecionar
+        //função para deselecionar
         const deselecionar = seletor =>
-            document.querySelectorAll(seletor).forEach(e.classList.remove('destaque'))
+        document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
 
-            selecionar('div')
+        selecionar('div')
 
-            deselecionar('*') //seletor universal
-            selecionar('.terceiro.ultimo')
-            deselecionar('*')
+        deselecionar('*')
+        selecionar('.terceiro.ultimo')
+
+        deselecionar('*')
+        selecionar(':not(#primeiro)')
+
+        deselecionar('*')
+        selecionar(':nth-child(1)')
+
+deselecionar('*')
+selecionar('div:nth-of-type(1)')
+
     </script>
 </body>
 </html>
