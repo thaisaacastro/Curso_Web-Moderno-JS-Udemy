@@ -12,8 +12,12 @@
     <script>              
         document.querySelector('#primeiro').classList.add('destaque')
 
-    const selecionar = seletor => 
-        document.querySelectorAll(seletor).forEach(e => e.classList)
+    const selecionar = seletor => // mais de um seletor
+        document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque')) // duas funções
+
+        //função deselecionar
+        const deselecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e.classList.remove('destaque'))
     </script>
 </body>
 </html>
