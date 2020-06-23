@@ -28,7 +28,11 @@
         HTMLCollection.prototype.log = log
         HTMLElement.prototype.log = log
         NodeList.prototype.log = log
-        
+        Node.prototype.log = log
+
+        const Lista = document.querySelector('div ul')
+        Lista.parentNode.log()
+
     </script>
 </body>
 
