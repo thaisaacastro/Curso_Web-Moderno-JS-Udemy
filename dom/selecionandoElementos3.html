@@ -36,6 +36,10 @@
         console.log(document.getElementsByName('pesquisa')) //name para obter form quanto input
         console.log(document.pesquisa)
         console.log(document.pesquisa.q) //nome do input
+        document.pesquisa.q.value = 'Linux Brazil'
+        document.pesquisa.hl.value = 'en-us' // um select
+        console.log(document.pesquisa.hl.selectedIndex) //qual índice que está selecionado
+        
 
     </script>
 </body>
