@@ -30,8 +30,15 @@
         NodeList.prototype.log = log
         Node.prototype.log = log
 
-        const Lista = document.querySelector('div ul')
-        Lista.parentNode.log()
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log() // ul
+        lista.childNodes.log() // li
+
+        const primeiro = lista.firstChild // primeiro dá lista
+        primeiro.log()
+        primeiro.nextSibling.log()
+
+        
 
     </script>
 </body>
