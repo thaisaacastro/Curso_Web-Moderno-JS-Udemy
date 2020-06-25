@@ -17,15 +17,15 @@
     <script>
         const img = document.querySelector('img') //elemento imagem
         console.log('getAttribute', img.getAttribute('src')) // valor do produto
-        console.log('src', img.src)
-        console.log('["src"]', img['src'])
+        console.log('src', img.src) //forma de acessar src
+        console.log('["src"]', img['src']) // anotação de colchetes
         console.log('alt', img.alt)
 
         console.log('Elemento "img" ...............') 
-        console.log('NodeType', img.nodeType)
-        console.log('NodeName', img.nodeName)
+        console.log('NodeType', img.nodeType) //Elemnto -> acessar -> html nodeType 
+        console.log('NodeName', img.nodeName) // nome do tal elemento
 
-        const src = img.getAttributeNode('src')
+        const src = img.getAttributeNode('src') // vai me dar o nó do atributo
         console.log('Atributo "src" ...............')
         console.log('NodeName', src.nodeType)
         console.log('NodeName', src.nodeName)
