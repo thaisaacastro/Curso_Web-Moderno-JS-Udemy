@@ -27,14 +27,14 @@
 
         const src = img.getAttributeNode('src') // vai me dar o nó do atributo
         console.log('Atributo "src" ...............')
-        console.log('NodeName', src.nodeType)
+        console.log('NodeName', src.nodeType) // Atributo
         console.log('NodeName', src.nodeName)
-        console.log('NodeValue', src.nodeValue)
+        console.log('NodeValue', src.nodeValue) // valor associado ao nó
 
         const link = document.querySelector('a')
         console.log('Elemento "a" ...............')
-        console.log('href', link.href)
-        console.log('firstChild.nodeType', link.firstChild.nodeType)
+        console.log('href', link.href) // acessar link
+        console.log('firstChild.nodeType', link.firstChild.nodeType) // filho do elemento
         link.firstChild.nodeValue = 'Novo Texto' 
 
     </script>
