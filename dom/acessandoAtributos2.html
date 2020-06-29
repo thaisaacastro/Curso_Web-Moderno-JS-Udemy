@@ -26,14 +26,16 @@
         lista.setAttribute('destino', 'empresa') // o atrib passa a ser empresa
         lista.setAttribute('status', 'aberto') // o atrib altera e adc
         lista.removeAttribute('destino')
-        console.log(lista.dataset.urgencia)
+        console.log(lista.dataset.urgencia)  // poderá ser redirecionado para o atrib personalizado
         lista.dataset.urgencia = 4
         console.log(lista.getAttribute('data-urgencia'))
 
+        // atributos que começa com data e prefixo hífen são tratados com diferentes
+
          // cuidado
          const label = document.querySelector('label')
-         console.log(label.for)
-        console.log(label.htmlFor)
+         console.log(label.for) // palavras reservada foto
+        console.log(label.htmlFor) // acessará o label
         console.log(label.getAttribute('for'))
 
     </script>
