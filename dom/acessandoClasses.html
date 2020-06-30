@@ -12,14 +12,26 @@
         Classes
     </div>
     <script>
-        const classes = document.querySelector('div').classList
+        const div = document.querySelector('div')
+        const classes = div.classList
         classes.add('destaque') // destaque
         classes.remove('destaque')
         classes.toggle('destaque') // alternância, se não existe ele adc. 
         console.log(classes.contains('destaque')) //está contido ou não na classes
         console.log(classes.length) // tamanho -> quantidade de classes que um determinado elemento tem
-        console.toggle('destaque') // se existe -> alternância
+        classes.toggle('destaque') // se existe -> alternância
         console.log(classes.length)
+
+        classes.add('destaque1')
+        classes.add('destaque2')
+        console.log(classes.length)
+
+        for(let c of classes) {
+            console.log(c)
+        } // busca todas as classes presentes
+
+        classes.forEach(c => console.log(c)) // associado a classes
+
 
 
 
