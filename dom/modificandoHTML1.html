@@ -21,11 +21,22 @@
         const p = document.createElement('p') //parágrafo
         p.innerHTML = 'Terceiro'
         const div3 = document.createElement('div')
-        div3.appendChild(p) // inseri no último elemento filho
+        div3.appendChild(p) // inseri no último elemento filho,INSERI NO HTML
 
         body.appendChild(div1)
         body.appendChild(div2)
         body.appendChild(div3)
+
+        const texto = document.createTextNode('Antes...')
+        div3.insertBefore(texto, div3.childNodes[0]) // insira o elemento filho em antes da posição descrita
+
+        const div4 = div3.cloneNode(true) // clone -> true, copia todos os filhos / false -> não copia
+        body.appendChild(div4)
+        body.removeChild(div3)
+        
+
+
+        
 
         
     </script>
