@@ -10,12 +10,12 @@
 <body class="conteudo exercicio">
     <div>
         <a href="https://google.com.br"
-            onclick="navegarEm5s(event)">Google</a>
+            onclick="navegarEm5s(event)">Google</a> 
     </div>
     <script>
       function navegarEm5s(e) {
           e.preventDefault()
-          console.log('Saindo em 5s...')
+          console.log('Saindo em 5s...') // o browser só aceita o nome de var(event)
           setTimeout(() => {
               const link = e.target // o elemento HTML que disparou o evento
               window.location.href = link.href
