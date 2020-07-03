@@ -14,12 +14,15 @@
     </div>
     <script>
       function navegarEm5s(e) {
-          e.preventDefault()
+          e.preventDefault() // prevenir que o evento padrão ocorra  
           console.log('Saindo em 5s...') // o browser só aceita o nome de var(event)
           setTimeout(() => {
               const link = e.target // o elemento HTML que disparou o evento
               window.location.href = link.href
           }, 5000)
       }
+
+      const a = document.querySelector('a')
+      a.onclick = navegarEm5s
     </script>
 </body>
