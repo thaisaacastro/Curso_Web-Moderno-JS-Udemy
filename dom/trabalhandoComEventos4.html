@@ -35,11 +35,11 @@
         submit.onclick = function(e) {
             e.preventDefault() //parar o evento padrão
             
-            const form = e.target.parentsNode
+            const form = e.target.parentNode
             const formData = new FormData(form)
             formData.append('ajax', true) // nova informação
             console.log(formData.get('q')) // se encontra a pesquisa
-            
+            console.log(formData.has('hl')) // determinado campo está contida
             }
     </script>
 </body>
