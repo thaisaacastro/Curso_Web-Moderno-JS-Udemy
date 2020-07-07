@@ -42,8 +42,13 @@
             console.log(formData.has('hl')) // determinado campo está contida
         
             for (let dado of formData) {
-                console.log(dado) //
+                console.log(dado) // mostra o que contém no elemento
             }
+            const form = document.forms[0]
+            form.onsumbit = function(e) {
+                
+            }
+
             }
 
         
