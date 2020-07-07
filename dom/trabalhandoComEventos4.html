@@ -36,7 +36,9 @@
             e.preventDefault() //parar o evento padrão
             
             const form = e.target.parentsNode
-            const formData 
+            const formData = new FormData(form)
+            formData.append('ajax', true) // nova informação
+            console.log(formData.get('q'))
         }
     </script>
 </body>
