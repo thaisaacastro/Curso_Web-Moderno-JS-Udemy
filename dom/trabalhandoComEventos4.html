@@ -31,25 +31,27 @@
         <button wm-submit>Pesquisar</button>
     </form>
     <script>
-        const submit = document.querySelector('[wm-submit]')
-        submit.onclick = function(e) {
-            e.preventDefault() //parar o evento padrão
+       // const submit = document.querySelector('[wm-submit]')
+        //submit.onclick = function(e) {
+          //  e.preventDefault() //parar o evento padrão
             
-            const form = e.target.parentNode
-            const formData = new FormData(form)
-            formData.append('ajax', true) // nova informação
-            console.log(formData.get('q')) // se encontra a pesquisa
-            console.log(formData.has('hl')) // determinado campo está contida
+            // const form = e.target.parentNode
+            // const formData = new FormData(form)
+            // formData.append('ajax', true) // nova informação
+            //  console.log(formData.get('q')) // se encontra a pesquisa
+            // console.log(formData.has('hl')) // determinado campo está contida
         
-            for (let dado of formData) {
-                console.log(dado) // mostra o que contém no elemento
-            }
+           // for (let dado of formData) {
+           //     console.log(dado) // mostra o que contém no elemento
+            //}
+            //}
+            
             const form = document.forms[0]
-            form.onsumbit = function(e) {
-                
-            }
+        form.onsubmit = function (e) {
+            e.preventDefault()
 
-            }
+        }
+            
 
         
     </script>
