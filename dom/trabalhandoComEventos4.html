@@ -31,6 +31,12 @@
         <button wm-submit>Pesquisar</button>
     </form>
     <script>
-        // ...
+        const submit = document.querySelector('[wm-submit]')
+        submit.onclick = function(e) {
+            e.preventDefault() //parar o evento padrão
+            
+            const form = e.target.parentsNode
+            const formData 
+        }
     </script>
 </body>
