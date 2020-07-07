@@ -40,6 +40,12 @@
             formData.append('ajax', true) // nova informação
             console.log(formData.get('q')) // se encontra a pesquisa
             console.log(formData.has('hl')) // determinado campo está contida
+        
+            for (let dado of formData) {
+                console.log(dado) //
             }
+            }
+
+        
     </script>
 </body>
