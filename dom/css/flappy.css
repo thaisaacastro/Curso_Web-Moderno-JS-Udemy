@@ -16,3 +16,10 @@
     background-color: deepskyblue;
     overflow: hidden; /*qualquer elemento que ultrapasse a div não aparece*/
 }
+
+.passaro {
+    position: absolute;
+    width: 60%;
+    left: calc(50% - 30px); /*tamanho dos birds*/
+    bottom: 50%;
+}
