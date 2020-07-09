@@ -5,4 +5,14 @@
 @font-face {
     font-family: 'Pixel';
     src: url('../fonts/Pixel.ttf'); 
-} /* fonte baixada no arquivo*/
+} /* fonte baixada no arquivo/importando*/
+
+[wm-flappy] /*área do jogo*/ {
+    position: relative;
+    border: 5px solid dodgerblue;
+    width: 1200px;
+    height: 700px;
+    margin: 15px;
+    background-color: deepskyblue;
+    overflow: hidden; /*qualquer elemento que ultrapasse a div não aparece*/
+}
