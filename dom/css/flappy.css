@@ -1,67 +1,71 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: 'Pixel';
-    src: url('../fonts/Pixel.ttf'); 
+  font-family: "Pixel";
+  src: url("../fonts/Pixel.ttf");
 } /* fonte baixada no arquivo/importando*/
 
 [wm-flappy] /*área do jogo*/ {
-    position: relative;
-    border: 5px solid dodgerblue;
-    width: 1200px;
-    height: 700px;
-    margin: 15px;
-    background-color: deepskyblue;
-    overflow: hidden; /*qualquer elemento que ultrapasse a div não aparece*/
+  position: relative;
+  border: 5px solid dodgerblue;
+  width: 1200px;
+  height: 700px;
+  margin: 15px;
+  background-color: deepskyblue;
+  overflow: hidden; /*qualquer elemento que ultrapasse a div não aparece*/
 }
 
 .passaro {
-    position: absolute;
-    width: 60px;
-    left: calc(50% - 30px); /*tamanho dos birds*/
-    bottom: 50%;
+  position: absolute;
+  width: 60px;
+  left: calc(50% - 30px); /*tamanho dos birds*/
+  bottom: 50%;
 }
 
 .par-de-barreiras {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column; /*vai ser localizado nas colunas*/
-    justify-content: space-between; 
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /*vai ser localizado nas colunas*/
+  justify-content: space-between;
 }
 
 .barreira {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .barreira .borda {
-    height: 30px;
-    width: 130px;
-    background: linear-gradient(90deg, #639301, #A5E82E);
-    border: 2px solid #000;
+  height: 30px;
+  width: 130px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border: 2px solid #000;
 }
 
 .barreira .corpo /*forma da maneira de um cano*/ {
-    height: 150px;
-    width: 110px;
-    background: linear-gradient(90deg, #639301, #A5E82E);
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
+  height: 150px;
+  width: 110px;
+  background: linear-gradient(90deg, #639301, #a5e82e);
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
 }
 
 .progresso {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-family: Pixel;
-    font-size: 70px;    
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: Pixel;
+  font-size: 70px;
 }
 /*concertar*/
 /*na forma de barreiras*/
 /*para manuseio*/
 /*concluir js*/
+/*mudar o layout*/
+/**/
+/**/
+/**/
