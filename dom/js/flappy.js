@@ -43,6 +43,25 @@ function ParDeBarreiras(altura, abertura, x) {
   this.sortearAbertura();
   this.setX(x);
 }
-
 //const b = new ParDeBarreiras(700, 200, 400); //altura, abertura e posição X
 //document.querySelector("[wm-flappy]").appendChild(b.elemento);
+
+function Barreiras(altura, largura, abertura, espaço, notificarPonto) {
+  this.pares = [
+    new ParDeBarreiras(altura, abertura, largura),
+    new ParDeBarreiras(altura, abertura, largura + espaço),
+    new ParDeBarreiras(altura, abertura, largura + espaço * 2),
+    new ParDeBarreiras(altura, abertura, largura + espaço * 3),
+  ];
+  const deslocamento = 3; // função responsável por dar um passo na animação
+  this.animar = () => {
+    this.pares.forEach((par) => {
+      par.setX(par.getX() - deslocamento);
+
+      // quando o elemento sair da área do jogo
+      if (par.getX() < -par.getLargura()) {
+        par.setX(par.getX() + espaço * this.pares.length); // o x vai para o final
+      }
+    });
+  };
+}
