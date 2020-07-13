@@ -9,4 +9,6 @@ function Barreira(reversa = false) {
 
   const borda = novoElemento("div", "borda");
   const corpo = novoElemento("div", "corpo");
+  this.elemento.appendChild(reversa ? corpo : borda); // definindo se atende primeiro o corpo ou a borda
+  this.elemento.appendChild(reversa ? borda : corpo); // false ou true
 }
