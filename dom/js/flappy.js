@@ -16,6 +16,15 @@ function Barreira(reversa = false) {
   this.setAltura = (altura) => (corpo.style.height = `${altura}px`);
 }
 
-const b = new Barreira(true);
-b.setAltura(200);
-document.querySelector("[wm-flappy]").appendChild(b.elemento);
+//const b = new Barreira(true);
+//b.setAltura(200);
+//document.querySelector("[wm-flappy]").appendChild(b.elemento);
+
+function ParDeBarreiras(altura, abertura, x) {
+  this.elemento = novoElemento("div", "par-de-barreiras");
+
+  this.superior = new Barreira(true); //barreira reversa, 1 corpo e depois a borda
+  this.superior = new Barreira(false);
+
+  this.elemento.appendChild(this.superior.elemento);
+}
