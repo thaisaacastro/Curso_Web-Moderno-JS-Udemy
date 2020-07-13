@@ -44,5 +44,5 @@ function ParDeBarreiras(altura, abertura, x) {
   this.setX(x);
 }
 
-const b = new ParDeBarreiras(700, 200, 400); //altura, abertura e posição X
-document.querySelector("[wm-flappy]").appendChild(b.elemento);
+//const b = new ParDeBarreiras(700, 200, 400); //altura, abertura e posição X
+//document.querySelector("[wm-flappy]").appendChild(b.elemento);
