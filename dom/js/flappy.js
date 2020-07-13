@@ -24,7 +24,7 @@ function ParDeBarreiras(altura, abertura, x) {
   this.elemento = novoElemento("div", "par-de-barreiras");
 
   this.superior = new Barreira(true); //barreira reversa, 1 corpo e depois a borda
-  this.superior = new Barreira(false);
+  this.inferior = new Barreira(false);
 
   this.elemento.appendChild(this.superior.elemento);
   this.elemento.appendChild(this.inferior.elemento);
@@ -53,6 +53,7 @@ function Barreiras(altura, largura, abertura, espaço, notificarPonto) {
     new ParDeBarreiras(altura, abertura, largura + espaço * 2),
     new ParDeBarreiras(altura, abertura, largura + espaço * 3),
   ];
+
   const deslocamento = 3; // função responsável por dar um passo na animação
   this.animar = () => {
     this.pares.forEach((par) => {
