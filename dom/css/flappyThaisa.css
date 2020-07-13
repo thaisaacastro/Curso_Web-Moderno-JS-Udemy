@@ -5,22 +5,23 @@
 @font-face {
   font-family: "Pixel";
   src: url("../fonts/Pixel.ttf");
-}
+} /* fonte baixada no arquivo/importando*/
 
-[wm-flappy] {
+[wm-flappy] /*área do jogo*/ {
   position: relative;
   border: 5px solid dodgerblue;
   height: 700px;
   width: 1200px;
   margin: 15px;
   background-color: deepskyblue;
-  overflow: hidden;
+  overflow: hidden; /*qualquer elemento que ultrapasse a div não aparece*/
 }
 
 .passaro {
   position: absolute;
   width: 60px;
-  left: calc(50% - 30px);
+  left: calc(50% - 30px); /*tamanho dos birds*/
+  bottom: 50%;
 }
 
 .par-de-barreiras {
@@ -29,7 +30,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /*espaço no meio*/
 }
 
 .barreira {
@@ -41,7 +42,7 @@
 .barreira .borda {
   height: 30px;
   width: 130px;
-  background: linear-gradient(90deg, #639301, #a5e82e);
+  background: linear-gradient(90deg, #639301, #a5f82f);
   border: 2px solid #000;
 }
 
@@ -52,12 +53,10 @@
   border-left: 2px solid #000;
   border-right: 2px solid #000;
 }
-
 .progresso {
   position: absolute;
   top: 10px;
   right: 10px;
   font-family: Pixel;
   font-size: 70px;
-  z-index: 100;
 }
