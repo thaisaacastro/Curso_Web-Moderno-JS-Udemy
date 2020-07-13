@@ -27,4 +27,14 @@ function ParDeBarreiras(altura, abertura, x) {
   this.superior = new Barreira(false);
 
   this.elemento.appendChild(this.superior.elemento);
+  this.elemento.appendChild(this.inferior.elemento);
+
+  this.sortearAbertura = () => {
+    const alturaSuperior = Math.random() /*de 0 a 1*/ * (altura - abertura);
+    const alturaInferior = altura - abertura - alturaSuperior;
+    this.superior.setAltura(alturaSuperior);
+    this.inferior.setAltura(alturaInferior);
+  };
+
+  this.getX = () => parseInt(this.elemento.style.left.split("px")[0]);
 }
