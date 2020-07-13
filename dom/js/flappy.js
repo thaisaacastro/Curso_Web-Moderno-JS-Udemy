@@ -37,4 +37,9 @@ function ParDeBarreiras(altura, abertura, x) {
   };
 
   this.getX = () => parseInt(this.elemento.style.left.split("px")[0]);
+  this.setX = (x) => (this.elemento.style.left = `${x}px`); // passa para o px o x
+  this.getLargura = () => this.elemento.clientWidth; //setar a largura
+
+  this.sortearAbertura();
+  this.setX(x);
 }
