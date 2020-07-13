@@ -60,8 +60,20 @@ function Barreiras(altura, largura, abertura, espaço, notificarPonto) {
 
       // quando o elemento sair da área do jogo
       if (par.getX() < -par.getLargura()) {
-        par.setX(par.getX() + espaço * this.pares.length); // o x vai para o final
+        par.setX(par.getX() + espaço * this.pares.length); // o x vai para o final da barreira
+        par.sortearAbertura(); // sortear a abertura
       }
+      const meio = largura / 2;
+      const cruzouOMeio =
+        par.getX() + deslocamento >= meio && par.getX() < meio;
+      if (cruzouOMeio) notificarPonto();
     });
   };
 }
+
+const barreiras = new Barreiras(700, 1200, 200, 400);
+const areaDoJogo = document.querySelector("[wm-flappy]");
+barreiras.pares.forEach((par) => areaDoJogo.appendChild(par.elemento));
+setInterval(() => {
+  barreiras.animar();
+}, 20);
