@@ -10,8 +10,8 @@
 [wm-flappy] /*área do jogo*/ {
   position: relative;
   border: 5px solid dodgerblue;
-  width: 1200px;
   height: 700px;
+  width: 1200px;
   margin: 15px;
   background-color: deepskyblue;
   overflow: hidden; /*qualquer elemento que ultrapasse a div não aparece*/
@@ -29,8 +29,8 @@
   top: 0;
   height: 100%;
   display: flex;
-  flex-direction: column; /*vai ser localizado nas colunas*/
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between; /*espaço no meio*/
 }
 
 .barreira {
@@ -42,18 +42,17 @@
 .barreira .borda {
   height: 30px;
   width: 130px;
-  background: linear-gradient(90deg, #639301, #a5e82e);
+  background: linear-gradient(90deg, #639301, #a5f82f);
   border: 2px solid #000;
 }
 
-.barreira .corpo /*forma da maneira de um cano*/ {
+.barreira .corpo {
   height: 150px;
   width: 110px;
   background: linear-gradient(90deg, #639301, #a5e82e);
   border-left: 2px solid #000;
   border-right: 2px solid #000;
 }
-
 .progresso {
   position: absolute;
   top: 10px;
