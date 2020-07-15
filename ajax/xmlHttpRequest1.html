@@ -33,7 +33,24 @@
         sucesso(resposta) {
           const estados = JSON.parse(resposta);
 
-          const linhas = estados.mao((estado) => {});
+          const linhas = estados.mao((estado) => {
+            const tdId = document.createElement("td");
+            tdId.innerHTML = estado.id; //conjunto de elementos da DOM
+
+            const tdNome = document.createElement("td");
+            tdNome.innerHTML = estado.nome;
+
+            const tdSigla = document.createElement("td");
+            tdSigla.innerHTML = estado.sigla;
+
+            const tr = document.createElement("tr");
+
+            tr.appendChild(tdId);
+            tr.appendChild(tdNome);
+            tr.appendChild(tdSigla);
+
+            return tr;
+          });
         },
       });
     </script>
