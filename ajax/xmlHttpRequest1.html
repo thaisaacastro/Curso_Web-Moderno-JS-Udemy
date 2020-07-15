@@ -32,6 +32,8 @@
         metodo: "get",
         sucesso(resposta) {
           const estados = JSON.parse(resposta);
+
+          const linhas = estados.mao((estado) => {});
         },
       });
     </script>
