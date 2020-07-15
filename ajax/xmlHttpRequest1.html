@@ -19,8 +19,8 @@
             config.sucesso(xhr.response); // chamar e a resposta ser bem sucedida
           } else if (xhr.status >= 400) {
             /*se for maior ou igual 400*/ config.erro({
-              code: xhr.status,
-              text: xhr.statusText,
+              codigo: xhr.status,
+              texto: xhr.statusText,
             });
           }
         };
@@ -33,7 +33,7 @@
         sucesso(resposta) {
           const estados = JSON.parse(resposta);
 
-          const linhas = estados.mao((estado) => {
+          const linhas = estados.map((estado) => {
             const tdId = document.createElement("td");
             tdId.innerHTML = estado.id; //conjunto de elementos da DOM
 
@@ -51,6 +51,14 @@
 
             return tr;
           });
+
+          const tabela = document.createElement("table");
+          linhas.forEach((linha) => tabela.appendChild(linha)); // adc elementos na linha
+          document.body.appendChild(tabela);
+        },
+        erro(e) {
+          const msg = document.createTextNode(`${e.codigo}: ${e.texto}`);
+          document.body.appendChild(msg);
         },
       });
     </script>
