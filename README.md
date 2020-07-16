@@ -13,3 +13,4 @@
   - Webpack
   - Gulp
   - Banco de Dados
+  - AJAX
