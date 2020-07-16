@@ -37,7 +37,8 @@
         sucesso(resposta) {
           const estados = resposta.getElementsByTagName("estado"); // pegar as propriedades
           const itens = Array.from(estados).reduce(
-            (html, estado) => html + `<li>${estado.attributes.nome.value}<li>`
+            (html, estado) => html + `<li>${estado.attributes.nome.value}<li>`,
+            ""
           );
         },
       });
