@@ -25,10 +25,9 @@
         const xhr = new XMLHttpRequest();
 
         if (xhr.upload) {
-          xhr.upload.onprogress /*forma de controlar o progresso do upload */ = (
-            e
-          ) => {
-            const atual = e.loaded;
+          xhr.upload.onprogress = (e) => {
+            const atual =
+              e.loaded; /*onprogress -> forma de controlar o progresso do upload */
             const total = e.total;
             const percentual = Math.floor((atual / total) * 100);
             config.progresso({ atual, total, percentual });
@@ -48,6 +47,7 @@
           formData: formData,
           progresso(dados) {
             const progresso = document.querySelector(".progresso");
+            progresso.innerHTML = JSON.stringify(dados); // os obj são transformados em string
           },
         });
       };
