@@ -11,7 +11,15 @@
 
     <script>
       const url = "dados/estados.json";
-      fetch(url).then((resp) => resp.json()); // retorna uma promise
+      fetch(url)
+        .then((resp) => resp.json()) // retorna uma promise
+        .then((estados) => {
+          const itens = estados.reduce(
+            (html, estado) => html + `<li>${estados.nome}<li>`,
+            ""
+          );
+          document.body.insertAdjacentHTML("beforeend", `<ul>${itens}<ul>`);
+        });
     </script>
   </body>
 </html>
