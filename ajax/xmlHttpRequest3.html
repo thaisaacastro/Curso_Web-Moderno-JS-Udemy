@@ -38,8 +38,13 @@
           const estados = resposta.getElementsByTagName("estado"); // pegar as propriedades
           const itens = Array.from(estados).reduce(
             (html, estado) => html + `<li>${estado.attributes.nome.value}<li>`,
-            ""
+            "" // passar a string vazia
           );
+          document.body.insertAdjacentHTML("beforeend", `<ul>${itens}<ul>`); //formando strings
+        },
+        erro(e) {
+          const msg = document.createTextNode(`${e.codigo}: ${e.texto}`);
+          document.body.appendChild(msg);
         },
       });
     </script>
