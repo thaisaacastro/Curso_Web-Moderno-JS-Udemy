@@ -19,11 +19,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage }).single("arquivo");
 
+//rota
 app.post("/upload", (req, res) /*função middleware*/ => {
   upload(req, res, (err) => {
     if (err) {
       return res.end("Ocorreu um erro.");
     }
+
+    res.end("Concluído com sucesso.");
   });
 });
 
