@@ -32,8 +32,11 @@ app.post("/upload", (req, res) /*função middleware*/ => {
 
 app.post("/formulario", (req, res) => {
   res.send({
-    /* operador spread*/ ...req.body,
+    ...req.body,
     id: 1,
+
+    /* operador spread ...*/
   });
 });
+
 app.listen(8080, () => console.log("Executando..."));

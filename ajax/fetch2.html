@@ -39,6 +39,7 @@
           method: form.method,
           body: new URLSearchParams(data),
         };
+
         fetch(form.action, options) // url que estou disparando
           .then((resp) => resp.json())
           .then((json) => {
