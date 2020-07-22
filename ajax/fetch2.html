@@ -41,14 +41,22 @@
         };
 
         const resultado = document.getElementById("resultado");
-        fetch(form.action, options) // url que estou disparando
-          .then((resp) => resp.json())
-          .then((json) => {
-            resultado.innerHTML = JSON.stringify(json);
-          })
-          .catch((e) => {
-            resultado.innerHTML = e;
-          });
+        //fetch(form.action, options) // url que estou disparando
+        // .then((resp) => resp.json())
+        // .then((json) => {
+        //   resultado.innerHTML = JSON.stringify(json);
+        //})
+        // .catch((e) => {
+        //  resultado.innerHTML = e;
+        //  });
+        try {
+          const resp = await fetch(form.action, options);
+          const json = await resp.json();
+          resultado.innerHTML = JSON.stringify(json);
+        } catch (e) {
+          resultado.innerHTML = e;
+          //rever
+        }
       };
     </script>
   </body>
