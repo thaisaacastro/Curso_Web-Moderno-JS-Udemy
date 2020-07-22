@@ -21,7 +21,7 @@
 
   <body class="conteudo exercicio">
     <h1>Formulário Via Fetch</h1>
-    <form name="usuarioForm" action="formulario" method="post">
+    <form name="usuarioForm" action="formulario" method="POST">
       <input type="text" name="nome" placeholder="Nome..." />
       <input type="text" name="sobrenome" placeholder="Sobrenome..." />
       <button>Salvar</button>
@@ -33,6 +33,7 @@
 
         const form = e.target;
         const data = new FormData(form);
+
         data.append("ajax", true);
 
         const options = {
@@ -50,12 +51,12 @@
         //  resultado.innerHTML = e;
         //  });
         try {
-          const resp = await fetch(form.action, options);
+          const baseURL = "http://localhost:4000";
+          const resp = await fetch(`${baseURL}/formulario`, options);
           const json = await resp.json();
           resultado.innerHTML = JSON.stringify(json);
         } catch (e) {
           resultado.innerHTML = e;
-          //rever
         }
       };
     </script>
