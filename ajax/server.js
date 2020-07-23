@@ -41,4 +41,14 @@ app.post("/formulario", (req, res) => {
   });
 });
 
+app.get("/parOuImpar", (req, res) => {
+  //receber dados do FrontEnd req.body
+  //req.query -> :numero=123
+  //req.params -> :numero
+  const par = parseInt(req.query.numero) % 2 === 0; //saber se par ou ímpar
+  res.send({
+    resultado: par ? "par" : "impar",
+  });
+});
+
 app.listen(4000, () => console.log("Executando..."));

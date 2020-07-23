@@ -12,6 +12,18 @@
     <div id="get"></div>
     <div id="post"></div>
 
-    <script></script>
+    <script>
+      function exibirResultado(id, dados) {
+        const texto = JSON.stringify(dados); //receber dados em JSON e converter em string
+        document.getElementById(id).innerHTML = texto;
+      }
+      axios
+        .get("parOuImpar", {
+          params: {
+            numero: 5,
+          },
+        })
+        .then((resp) => exibirResultado("get", resp.data));
+    </script>
   </body>
 </html>
