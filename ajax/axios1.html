@@ -10,6 +10,14 @@
   <body class="conteudo exercicio">
     <h1>Estados</h1>
 
-    <script></script>
+    <script>
+      const url = "dados/estados.json";
+      axios(urL).then((resp) => {
+        const itens = resp.data.reduce(
+          (html, estado) => +`<li>${estado.nome}<li>, ''` //converter para uma lista e passar para uma string vazia.
+        );
+        document.body.insertAdjacentHTML();
+      }); // função then, recebo a resposta
+    </script>
   </body>
 </html>
