@@ -14,9 +14,9 @@
       const url = "dados/estados.json";
       axios(urL).then((resp) => {
         const itens = resp.data.reduce(
-          (html, estado) => +`<li>${estado.nome}<li>, ''` //converter para uma lista e passar para uma string vazia.
+          /*JSON convertido*/ (html, estado) => +`<li>${estado.nome}<li>, ''` //converter para uma lista e passar para uma string vazia.
         );
-        document.body.insertAdjacentHTML();
+        document.body.insertAdjacentHTML("beforeend", `<ul>${itens}<ul>`);
       }); // função then, recebo a resposta
     </script>
   </body>
