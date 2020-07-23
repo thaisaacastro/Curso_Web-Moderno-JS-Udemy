@@ -12,6 +12,21 @@
     <div id="get"></div>
     <div id="post"></div>
 
-    <script></script>
+    <script>
+      function exibirResultado(id, dados) {
+        const texto = JSON.stringify(dados); //receber dados em JSON e converter em string
+        document.getElementById(id).innerHTML = texto;
+      }
+
+      $.ajax({
+        url: "http://localhost:4000/parOuImpar",
+        data: {
+          numero: 5,
+        },
+        sucess(data) {
+          exibirResultado("get", data);
+        },
+      }); // $ ou jQuery para referenciar a biblioteca
+    </script>
   </body>
 </html>
