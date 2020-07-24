@@ -37,6 +37,11 @@
       document.querySelectorAll("[wm-link]").forEach((link) => {
         const url = link.atributes["wm-link"].value;
         const seletorDestino = link.atributes["wm-destino".value];
+
+        link.onclick = (e) => {
+          e.preventDefault();
+          navegarViaAjax(url, seletorDestino);
+        };
       }); //todos os links
     </script>
   </body>
