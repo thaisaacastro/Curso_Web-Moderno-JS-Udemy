@@ -29,7 +29,7 @@
         .then((resp) => exibirResultado("get", resp.data));
 
       axios
-        .post("formulario", {
+        .post("http://localhost:4000/formulario", {
           nome: "Ratazana",
           sobrenome: "Silva",
         })

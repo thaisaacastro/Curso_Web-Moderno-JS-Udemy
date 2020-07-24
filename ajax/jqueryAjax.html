@@ -19,14 +19,28 @@
       }
 
       $.ajax({
-        url: "http://localhost:4000/parOuImpar",
+        url: "parOuImpar",
         data: {
-          numero: 5,
+          numero: 6,
         },
         sucess(data) {
           exibirResultado("get", data);
         },
       }); // $ ou jQuery para referenciar a biblioteca
+      jQuery.ajax({
+        url: "formulario",
+        method: "post",
+        data: {
+          nome: "João",
+          sobrenome: "Silva",
+        },
+        sucess(data) {
+          exibirResultado("post", data);
+        },
+        error(e) {
+          exibirResultado("post", e);
+        },
+      });
     </script>
   </body>
 </html>
