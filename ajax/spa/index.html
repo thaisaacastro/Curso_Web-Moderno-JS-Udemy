@@ -47,7 +47,7 @@
         };
       }); //todos os links
 
-      //onpopstate -> tirando dentro de uma estrutura de dados, tirando o primeiro elemento da pilha de estado de nav
+      // onpopstate -> tirando, dentro de uma estrutura de dados, tirando o primeiro elemento da pilha de estado de nav
       window.onpopstate = (e) => {
         if (e.state) {
           navegarViaAjax(window.location.href, e.state.seletor, false);
