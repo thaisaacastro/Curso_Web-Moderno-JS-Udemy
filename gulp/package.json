@@ -19,6 +19,6 @@
     "gulp-typescript": "4.0.2",
     "gulp-uglify": "3.0.0",
     "gulp-uglifycss": "1.0.9",
-    "typescript": "2.8.3" gd
+    "typescript": "2.8.3"
   }
 }
