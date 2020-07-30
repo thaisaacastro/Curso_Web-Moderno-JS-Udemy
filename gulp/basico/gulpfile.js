@@ -1,6 +1,6 @@
 const gulp = require("gulp"); // importando o gulp
-//const { series } = require("gulp"); //fazer várias tarefas em série
-const series = gulp.series;
+const { series, parallel } = require("gulp"); //fazer várias tarefas em série
+//const series = gulp.series;
 
 const antes1 = (cb) => {
   console.log("Tarefa Antes 1!");
@@ -13,7 +13,9 @@ const antes2 = (cb) => {
 };
 
 function copiar(cb) /*callback*/ {
-  console.log("Tarefa de copiar!");
+  gulp
+    .src(["pastaA.arquivo1.txt", "pastaA.arquivo2.txt"]) //serve para selecionar quais arq vc vai usar como entrada para este det arq
+    .pipe(); //
   return cb();
 } // determinar qual tarefa foi concluída para o gulp
 
@@ -22,4 +24,4 @@ const fim = (cb) => {
   return cb();
 };
 
-module.exports.default = series(antes1, antes2, copiar, fim);
+module.exports.default = series(parallel(antes1, antes2), copiar, fim);
