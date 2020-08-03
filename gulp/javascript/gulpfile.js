@@ -19,3 +19,5 @@ function padrao(cb) {
 
   return cb();
 }
+
+exports.default = series(padrao);
