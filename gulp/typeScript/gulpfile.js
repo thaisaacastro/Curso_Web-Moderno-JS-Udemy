@@ -4,5 +4,10 @@ const ts = require("gulp-typescript");
 const tsProject = ts.createProject("tsconfig.json");
 
 function transformacaoTS() {
-  return tsProject.src().pipe(tsProject());
+  return tsProject
+    .src() // pegar todo cód fonte
+    .pipe(tsProject())
+    .pipe(gulp.dest("build")); // passando para pasta de destino
 }
+
+exports.default = series(transformacaoTS);
