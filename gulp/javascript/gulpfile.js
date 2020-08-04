@@ -5,7 +5,7 @@ const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 
 function padrao(cb) {
-  gulp
+  return gulp
     .src("src/**/*.js") // qualquer sub pasta que esteja.
     .pipe(
       babel({
@@ -15,10 +15,13 @@ function padrao(cb) {
     )
 
     .pipe(uglify()) // vai pegar todo cod e converter para ser mimificado
+    .on("error", (err) => console.log(err)) // quando acontecer det evento
     .pipe(concat("codigo.min.js")) // todos os arq selecionados que já foram copilados este res será concatenado
     .pipe(gulp.dest("build")); // destino
-
-  return cb();
 }
 
+function fim(cb) {
+  console.log("FIM!!!");
+  return cb();
+}
 exports.default = series(padrao);
