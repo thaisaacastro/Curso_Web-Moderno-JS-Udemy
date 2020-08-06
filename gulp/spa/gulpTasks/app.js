@@ -38,6 +38,9 @@ function appIMG() {
 }
 
 gulp.task("appHTML", appHTML); //registrar uma task
+gulp.task("appCSS", appCSS);
+gulp.task("appJS", appJS);
+gulp.task("appIMG", appJS);
 
 module.exports = {
   appHTML,
