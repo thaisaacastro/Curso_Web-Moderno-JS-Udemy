@@ -1,4 +1,6 @@
-import Pessoa from "./pessoa";
+const Pessoa = require("./pessoa");
+
+//import Pessoa from "./pessoa";
 
 const atendente = new Pessoa();
-console.log(atendente);
+console.log(atendente.cumprimentar());

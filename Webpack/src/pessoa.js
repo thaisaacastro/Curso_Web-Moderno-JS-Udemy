@@ -1,5 +1,6 @@
-export default class Pessoa {
+// export default
+module.exports = class Pessoa {
   cumprimentar() {
     return "Bom dia!";
   }
-}
+};
