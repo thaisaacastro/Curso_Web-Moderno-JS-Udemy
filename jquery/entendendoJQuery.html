@@ -20,9 +20,10 @@
 
       $.fn.fundoVerde = function () {
         this.css("background-color", "green");
+        return this;
       }; // colocar uma propriedade css
 
-      $("body").fundoVerde().hide(1000);
+      $("body").fundoVerde().fadeOut(1000);
       //hide ->seletor que vai selecionar um conj de obj
       //show ->exibir
       //fadeOut -> outra chamada
