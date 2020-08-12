@@ -13,7 +13,12 @@
     <div>2</div>
 
     <script>
-      $("div").hide(5000); //seletor que vai selecionar um conj de obj -> esconder os elementos por 5000 segundos/hide
+      $("div").hide(5000).show(5000).fadeOut(5000);
+      console.log($("div").get(0)); // pra vc pegar o obj da dom especificamente vc usa o metodo get
+      console.log($);
+      //hide ->seletor que vai selecionar um conj de obj
+      //show ->exibir
+      //fadeOut -> outra chamada
     </script>
   </body>
 </html>
