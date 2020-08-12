@@ -18,11 +18,11 @@
       console.log($.isEmptyObject({ nome: null })); // função utilitária
       console.log(jQuery.inArray(3, [1, 2, 3]));
 
-      s.fn.fundoVerde = function () {
+      $.fn.fundoVerde = function () {
         this.css("background-color", "green");
-      };
+      }; // colocar uma propriedade css
 
-      $("body").fundoVerde();
+      $("body").fundoVerde().hide(1000);
       //hide ->seletor que vai selecionar um conj de obj
       //show ->exibir
       //fadeOut -> outra chamada
