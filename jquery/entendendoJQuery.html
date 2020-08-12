@@ -14,8 +14,9 @@
 
     <script>
       $("div").hide(5000).show(5000).fadeOut(5000);
-      console.log($("div").get(0)); // pra vc pegar o obj da dom especificamente vc usa o metodo get
-      console.log($.isEmptyObject({ nome: null }));
+      console.log($("div").get(1)); // pra vc pegar o obj da dom especificamente vc usa o metodo get
+      console.log($.isEmptyObject({ nome: null })); // função utilitária
+      console.log(jQuery.inArray(3, [1, 2, 3]));
       //hide ->seletor que vai selecionar um conj de obj
       //show ->exibir
       //fadeOut -> outra chamada
