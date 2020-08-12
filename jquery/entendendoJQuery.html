@@ -17,6 +17,12 @@
       console.log($("div").get(1)); // pra vc pegar o obj da dom especificamente vc usa o metodo get
       console.log($.isEmptyObject({ nome: null })); // função utilitária
       console.log(jQuery.inArray(3, [1, 2, 3]));
+
+      s.fn.fundoVerde = function () {
+        this.css("background-color", "green");
+      };
+
+      $("body").fundoVerde();
       //hide ->seletor que vai selecionar um conj de obj
       //show ->exibir
       //fadeOut -> outra chamada
