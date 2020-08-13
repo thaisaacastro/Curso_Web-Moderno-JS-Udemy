@@ -55,7 +55,10 @@
       $("li.opcional").removeClass("destaque");
       $("div p span").addClass("destaque");
 
-      //
+      // Exclusivos jQuery
+      $("li:first").css("border", "solid 3px yellow");
+      $("li:odd").css("border", "solid 10px orange"); // odd os impares
+      $("li:gt(1)").css("border", "solid 10px white"); // maior que determinado indice
     </script>
   </body>
 </html>
