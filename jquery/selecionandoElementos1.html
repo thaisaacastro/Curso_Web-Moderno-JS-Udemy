@@ -62,9 +62,12 @@
       $("li:not(:last)").css("border", "none"); // li que nao seja o ultimo elemento de determinada lista
       $('li:contains("r")').css("background-color", "black"); // dentro de determinada elementos contém
 
-      $("form*").hide(); // esconder todos os elementos dentro do form
+      $("form *").hide(); // esconder todos os elementos dentro do form
       $("form :text").show(); // retornar
-      $("form :password");
+      $("form :password").show();
+      $("form :checkbox").show();
+      $("form :radio").show();
+      $("form :file").show();
     </script>
   </body>
 </html>
