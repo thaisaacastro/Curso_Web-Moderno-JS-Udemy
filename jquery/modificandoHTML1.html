@@ -20,11 +20,14 @@
       // Conteúdo 2
       const elementos = [
         $("<li></li>").append("Arroz"),
-        $("</li>").append("Feijão"),
-        $("</li>").append("Carne"),
+        $("<li>").append("Feijão"),
+        $("<li>").append("Carne"),
       ];
 
-      const lista = $("<ul><li>Sorvete</></ul>");
+      const lista = $("<ul><li>Sorvete</></ul>").prepend(elementos);
+      $("#conteudo2").append(lista);
+
+      // Conteúdo 3
     </script>
   </body>
 </html>
