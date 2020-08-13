@@ -97,7 +97,20 @@
       $("a[href='#link1']").parents().css(comBorda).css(semBorda);
       $("a[href='#link1']").parentsUntil($("body")).css(comBorda).css(semBorda); // nav todos os pais até det ponto
 
-      $("main").children().css(comBorda).;
+      $("main").children().css(comBorda).css(semBorda);
+
+      $("body").find("a").css(comBorda).css(semBorda); // todos elementos apartir de det nó
+
+      const elementoDOM = document.getElementsByClassName("menu");
+      $(elementoDOM).css(comBorda);
+
+      $("main")
+        .children()
+        .each((i, e) => $(e).css(comBorda))
+        .css(semBorda); // interação no qual pega todos os filhos e percorre
+      $("li").each((i, e) => {
+        $(e).css(comBorda).css(semBorda);
+      });
     </script>
   </body>
 </html>
