@@ -15,6 +15,14 @@
     <p class="numero">4</p>
     <p class="numero">5</p>
 
-    <script></script>
+    <script>
+      $("#div1").append(", 2");
+      $("#div1").prepend("0,");
+
+      $("<span>, 3</span>").appendTo("#div1"); //  o conteúdo precede o método
+      $("<span>-1, </span>").prependTo("#div1"); //  o conteúdo precede o método
+
+      $("#div2").before("<p>Antes 2</p>");
+    </script>
   </body>
 </html>
