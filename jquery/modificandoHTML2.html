@@ -28,7 +28,12 @@
       $("<p>Antes 3</p>").insertBefore("#div3"); // inverte a ordem
       $("<p>Depois 3</p>").insertAfter("#div3");
 
-      $("p.numero").wrap("<div>"); // envolver duas divs
+      // $("p.numero").wrap("<div>"); // envolver duas divs
+      $("p.numero").wrapAll('<div id="div4">'); // envolve as duas divs em um unico container
+      $("#div4").empty(); // apaga a div
+      $("#div3, #div4").prev().remove(); // selecionar as div 3, 4/ prev -> voltar pro anterior
+
+      $("<div>Substituto</div>").replaceAll("body > p"); //substituir
     </script>
   </body>
 </html>
