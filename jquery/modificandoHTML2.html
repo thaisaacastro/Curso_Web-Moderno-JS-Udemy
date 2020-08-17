@@ -23,6 +23,12 @@
       $("<span>-1, </span>").prependTo("#div1"); //  o conteúdo precede o método
 
       $("#div2").before("<p>Antes 2</p>");
+      $("#div2").after("<p>Depois 2</p>");
+
+      $("<p>Antes 3</p>").insertBefore("#div3"); // inverte a ordem
+      $("<p>Depois 3</p>").insertAfter("#div3");
+
+      $("p.numero").wrap("<div>"); // envolver duas divs
     </script>
   </body>
 </html>
