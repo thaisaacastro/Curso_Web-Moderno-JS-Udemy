@@ -33,7 +33,11 @@
       $("#div4").empty(); // apaga a div
       $("#div3, #div4").prev().remove(); // selecionar as div 3, 4/ prev -> voltar pro anterior
 
-      $("<div>Substituto</div>").replaceAll("body > p"); //substituir
+      // $("<div>Substituto</div>").replaceAll("body > p"); //substituir
+      // -> RECOMENDADO $("body > p").replaceWith("<div>Substituto</div>"); // seletor e depois elemento
+      $("body > p").replaceWith(function () {
+        return $("<div>").html($(this).html()).append("!!!"); // append acrescentando
+      });
     </script>
   </body>
 </html>
