@@ -12,12 +12,18 @@
     <div id="conteudo"></div>
 
     <script>
-      const pessoas = [
-        { nome: "Ratazana", nota: 9.1 },
-        { nome: "Amor", nota: 8.4 },
-        { nome: "Mega Rat", nota: 7.6 },
-        { nome: "Imbecil", nota: 9.7 },
-      ];
+      $(document).ready(function () {
+        const pessoas = [
+          { nome: "Ratazana", nota: 9.1 },
+          { nome: "Amor", nota: 8.4 },
+          { nome: "Mega Rat", nota: 7.6 },
+          { nome: "Imbecil", nota: 9.7 },
+        ];
+        const linhas = pessoas.map((p) => {
+          const tdNome = $("<td>").html(p.nome);
+          const tdNota = $("<td>").html(p.nota);
+        });
+      });
     </script>
   </body>
 </html>
