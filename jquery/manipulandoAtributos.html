@@ -33,6 +33,12 @@
         const getIntervalAtual = () => parseInt($elemento.attr("wm-relogio")); // parseInt -> analisa um argumento string e retorna um inteiro na base especificada
 
         let temporizador = null;
+        const iniciar = () => {
+          if (temporizador) clearInterval(temporizador);
+          temporizador = setInterval(() => {
+            horaCerta.html(new Date().toLocaleDateString("pt-BR"));
+          }, getIntervalAtual());
+        };
       }
 
       $("[wm-relogio]").each((i, e) => new Relogio(e));
