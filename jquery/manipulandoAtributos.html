@@ -39,6 +39,12 @@
             horaCerta.html(new Date().toLocaleDateString("pt-BR"));
           }, getIntervalAtual());
         };
+
+        const alterarIntervalo = (delta) => {
+          const novo = Math.max(getIntervalAtual() + delta, 1000);
+          $elemento.attr("wm-relogio", novo);
+          iniciar();
+        };
       }
 
       $("[wm-relogio]").each((i, e) => new Relogio(e));
