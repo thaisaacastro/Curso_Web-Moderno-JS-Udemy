@@ -30,7 +30,9 @@
         const $elemento = $(elemento); // elemento que contém todas as funcoes providas do JQuery
         $elemento.append(horaCerta, botaoMenos, botaoMais);
 
-        const getIntervalAtual = () => parseInt(); // analisa um argumento string e retorna um inteiro na base especificada
+        const getIntervalAtual = () => parseInt($elemento.attr("wm-relogio")); // parseInt -> analisa um argumento string e retorna um inteiro na base especificada
+
+        let temporizador = null;
       }
 
       $("[wm-relogio]").each((i, e) => new Relogio(e));
