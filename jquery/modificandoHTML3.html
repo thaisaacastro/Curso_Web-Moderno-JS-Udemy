@@ -12,17 +12,23 @@
     <div id="conteudo"></div>
 
     <script>
-      $(document).ready(function () {
-        const pessoas = [
+      // $(document).ready(function () {
+      $(function () {
+        const alunos = [
           { nome: "Ratazana", nota: 9.1 },
-          { nome: "Amor", nota: 8.4 },
+          { nome: "Amor", nota: 10.0 },
           { nome: "Mega Rat", nota: 7.6 },
           { nome: "Imbecil", nota: 9.7 },
         ];
-        const linhas = pessoas.map((p) => {
-          const tdNome = $("<td>").html(p.nome);
-          const tdNota = $("<td>").html(p.nota);
+        const linhas = alunos.map((aluno) => {
+          const tdNome = $("<td>").html(aluno.nome);
+          const tdNota = $("<td>").html(aluno.nota);
+          // return $("<tr>").append(tdNome).append(tdNota);
+          return $("<tr>").append(tdNome, tdNota);
+          //return $("<tr>").append([tdNome, tdNota]);
         });
+        const tabela = $("<table>").append(linhas).css("border", "solid 5px");
+        $("#conteudo").append(tabela);
       });
     </script>
   </body>
