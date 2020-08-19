@@ -30,7 +30,14 @@
       $(window).resize(function (e) {
         const l = $(window).width(); //largura
         const a = $(window).height(); //altura
+        $("#resultado1").html(`Largura: ${l} e Altura: ${a}`);
       });
+
+      $(":input").select((e) => {
+        const inicio = e.target.selectionStart;
+        const fim = e.target.selectionEnd;
+        $("#resultado2").html(e.target.value.substring(inicio, fim));
+      }); // seleciona uma parte do txt
     </script>
   </body>
 </html>
