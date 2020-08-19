@@ -21,7 +21,16 @@
     <div id="resultado2">?</div>
     <script>
       const alternarDestaque = () => $("#div1").toggleClass("destaque");
-      $("#div1").hover(alternarDestaque, (e) => {});
+      //   $("#div1").on("mouseenter mouseleave", alternarDestaque);
+      $("#div1").hover(alternarDestaque, alternarDestaque);
+
+      $("#div1").one("mouseenter", (e) => alert("Aviso IMPORTANTE: Obrigada!")); // o evento vai acontecer única vez
+      $("#div1").dblclick((e) => $("#div1").fadeOut(1000).fadeIn(1000)); // fazer uma animação de sumir e voltar
+
+      $(window).resize(function (e) {
+        const l = $(window).width(); //largura
+        const a = $(window).height(); //altura
+      });
     </script>
   </body>
 </html>
