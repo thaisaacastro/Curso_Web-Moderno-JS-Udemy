@@ -41,7 +41,9 @@
       const backgroundOriginal = $("body").css("background-color");
 
       $("input").keyup(function (e) {
-        console.log(e.target.value);
+        const valor = $(this).val();
+        if (valor.match(/#{\da-fA-F{3,6}}/))
+          $("body").css("background-color", backgroundOriginal);
       });
     </script>
   </body>
