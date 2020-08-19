@@ -24,6 +24,19 @@
       }
 
       $("body").on("mousemove", mostrarPosicaoMouse); // mouse mexer dispara um evento
+
+      $("#posicao").mouseover((e) => {
+        $("body").off("mousemove", mostrarPosicaoMouse);
+      }); // parar o movimento do mouse na div posicao
+
+      $("#posicao").mouseleave((e) => {
+        $("body").mousemove(mostrarPosicaoMouse);
+      }); // quando sair da div ele volta a monitorar o mouse
+
+      let cliques = 0;
+      $("body").click((e) => {
+        $("#cliques").html(`Cliques: ${++cliques}`);
+      }); // controlar quantos estados de clicks
     </script>
   </body>
 </html>
