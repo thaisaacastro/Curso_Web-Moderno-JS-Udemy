@@ -37,6 +37,12 @@
       $("body").click((e) => {
         $("#cliques").html(`Cliques: ${++cliques}`);
       }); // controlar quantos estados de clicks
+
+      const backgroundOriginal = $("body").css("background-color");
+
+      $("input").keyup(function (e) {
+        console.log(e.target.value);
+      });
     </script>
   </body>
 </html>
