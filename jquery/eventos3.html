@@ -35,6 +35,9 @@
 
         const rt = e.relatedTarget ? e.relatedTarget.tagName : null; // retorna qual elemento sendo inserido ou encerrado no movimento do mouse
         div1.append(`<br>relatedTarget: ${rt}`);
+
+        div1.append(`<br>type: ${e.type}`);
+        div1.append(`<br>which: ${e.which}`); // tecla e botão pressionado
       }
 
       $("#div1, #div2").on("mouseenter mouseleave", exibiriDadosEventos);
