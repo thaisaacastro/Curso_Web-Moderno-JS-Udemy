@@ -38,6 +38,10 @@
 
         div1.append(`<br>type: ${e.type}`);
         div1.append(`<br>which: ${e.which}`); // tecla e botão pressionado
+        div1.append(`<br>metaKey: ${e.metaKey}`);
+
+        div2.append(`pageX: ${e.pageX}`);
+        div2.append(`<br>pageY: ${e.pageY}`);
       }
 
       $("#div1, #div2").on("mouseenter mouseleave", exibiriDadosEventos);
