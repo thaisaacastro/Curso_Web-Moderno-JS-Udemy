@@ -27,6 +27,11 @@
     <script>
       function exibiriDadosEventos(e) {
         $("#resultado").empty(); // limpar
+        const div1 = $("<div>");
+        const div2 = $("<div>");
+
+        $("#resultado").append(div1, div2);
+        div1.append(`target: ${e.target.id}`);
       }
 
       $("#div1, #div2").on("mouseenter mouseleave", exibiriDadosEventos);
