@@ -18,7 +18,7 @@
       // const s = { none: 'Não é o JQuery'}
       (function ($) {
         $.fn.intepretar = function () {
-          const retirarChaves = ($) => s.substring(2, s.length - 2);
+          const retirarChaves = (s) => s.substring(2, s.length - 2);
           const conteudo = $(this).html();
           const expressoesComChaves = conteudo.match(/\{\{.+\}\}/g); // chaves literais -> arrays de match
           const expressoes = expressoesComChaves.map(retirarChaves);
@@ -31,8 +31,12 @@
               resultados[i]
             );
           }
+          $(this).html(conteudoFinal);
+          return this;
         };
       })(jQuery);
+
+      $("div").intepretar();
     </script>
   </body>
 </html>
