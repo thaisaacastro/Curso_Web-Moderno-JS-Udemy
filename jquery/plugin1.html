@@ -19,6 +19,18 @@
       (function ($) {
         $.fn.intepretar = function () {
           const retirarChaves = ($) => s.substring(2, s.length - 2);
+          const conteudo = $(this).html();
+          const expressoesComChaves = conteudo.match(/\{\{.+\}\}/g); // chaves literais -> arrays de match
+          const expressoes = expressoesComChaves.map(retirarChaves);
+          const resultados = expressoes.map((e) => eval(e));
+
+          let conteudoFinal = conteudo;
+          for (let i = 0; i < expressoesComChaves.length; i++) {
+            conteudoFinal = conteudoFinal.replace(
+              expressoesComChaves[i],
+              resultados[i]
+            );
+          }
         };
       })(jQuery);
     </script>
