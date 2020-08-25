@@ -31,6 +31,12 @@
       mensagem
     );
 
+    const regex = new RegExp(/(\d\d):(\d\d):(\d\d)/);
+    const horarioAlvo = regex.exec(opcoesFinais.horario);
+    // console.log(horarioAlvo);
+
+    let temporizador = setInterval(() => {}, 1);
+
     return this;
   };
 })(jQuery);
